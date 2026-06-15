@@ -1,0 +1,125 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: rgb(59, 59, 59);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(image/kuliner\ nusantara.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+h2,
+h3 {
+  color: #333;
+}
+p {
+  color: #555;
+}
+ul {
+  margin: 10px 0;
+  padding: 0 20px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto;
+}
+
+.Bahan-Bahan {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  animation: slideInLeft 1s ease-in-out;
+  animation-delay: 0.1s;
+  
+}
+.Pengertian {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  animation: slideInLeft 0.5s ease-in-out;
+  animation-delay: 0.1s;
+
+}
+.Sejarah {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  animation: slideInLeft 1.5s ease-in-out;
+  animation-delay: 0.1s;
+  
+}
+.Variasi {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  animation: slideInLeft 2s ease-in-out;
+  animation-delay: 0.1s;
+ 
+}
+
+.Pengertian, .Bahan-Bahan, .Sejarah, .Variasi {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+
+.custom-symbols {
+  list-style-type: none;
+}
+
+.custom-symbols li::before {
+  content: "\2606";
+  color: black;
+}

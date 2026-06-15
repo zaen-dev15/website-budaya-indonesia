@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seni Teater Indonesia</title>
+    <link rel="website icon" type="png" href="indonesia.png" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Habibi&family=Poppins:ital,wght@1,600&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background-color: #1e1e1e;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* jelajahi */
+      .hero {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(image/seni\ teater.jpg) no-repeat center center/cover;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .container {
+        width: 45%;
+        height: 100vh;
+        background: rgba(86, 86, 86, 0.3);
+        backdrop-filter: blur(4px);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .info {
+        width: 550px;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        left: 15%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .info h1 {
+        font-size: 3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+      }
+
+      .info p {
+        color: whitesmoke;
+        font-size: 0.8rem;
+        line-height: 2rem;
+        margin: 20px 0;
+        line-height: 18px;
+        margin-top: 7%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.05em;
+      }
+
+      .info button {
+        margin-top: 4%;
+        width: 40%;
+        padding: 10px 15px;
+        outline: none;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        background: transparent;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+      }
+
+      .info button:hover {
+        background-color: #ffb300;
+        color: white;
+        transform: scale(1.1) translateY(-5px);
+        transition: 0.3s ease;
+        border: none;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.507);
+      }
+
+      @media (max-width: 1200px) {
+        .container {
+          width: 60%;
+        }
+
+        .info h1 {
+          font-size: 3rem;
+        }
+
+        .info p {
+          font-size: 0.8rem;
+        }
+
+        .info button {
+          width: 25%;
+          font-size: 0.9rem;
+        }
+
+        .destinasi h2 {
+          font-size: 2rem;
+        }
+
+        .destinasi-card h3 {
+          font-size: 1.3rem;
+        }
+
+        .destinasi-card p {
+          font-size: 0.9rem;
+        }
+
+        .gallery {
+          font-size: 2.5rem;
+        }
+
+        .img-box img {
+          height: 60vh;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          width: 80%;
+        }
+
+        .info h1 {
+          font-size: 2.5rem;
+        }
+
+        .info p {
+          font-size: 0.7rem;
+        }
+
+        .info button {
+          width: 25%;
+          font-size: 0.8rem;
+        }
+
+        .destinasi h2 {
+          font-size: 1.8rem;
+        }
+
+        .destinasi-container {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .gallery {
+          font-size: 2rem;
+        }
+
+        .img-box img {
+          height: 50vh;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          width: 100%;
+        }
+
+        .info h1 {
+          font-size: 2rem;
+        }
+
+        .info p {
+          font-size: 0.6rem;
+        }
+
+        .info button {
+          width: 25%;
+          font-size: 0.7rem;
+        }
+
+        .destinasi h2 {
+          font-size: 1.5rem;
+        }
+
+        .destinasi-container {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery {
+          font-size: 1.5rem;
+        }
+
+        .img-box img {
+          height: 40vh;
+        }
+      }
+
+      /* pilihan tempat */
+      .destinasi {
+        padding: 50px 20px;
+        text-align: center;
+        background: #1e1e1e;
+      }
+      .destinasi h2 {
+        font-size: 2.5rem;
+        color: #ffb300;
+        margin-bottom: 40px;
+        font-weight: 800;
+      }
+      .destinasi-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .destinasi-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 30px 30px 30px rgba(168, 168, 168, 0.171);
+        transition: transform 0.3s;
+      }
+      .destinasi-card:hover {
+        transform: translateY(-10px);
+      }
+      .destinasi-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .destinasi-card h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin: 15px 0 10px;
+      }
+      .destinasi-card p {
+        font-size: 1rem;
+        color: #666;
+        padding: 0 15px 20px;
+        line-height: 1.5;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      body {
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      header {
+        margin-top: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 9%;
+        background-color: transparent;
+        filter: drop-shadow(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+      }
+
+      header:hover {
+        background: #18181882;
+        transition: all 0.5s ease;
+      }
+
+      header:not(:hover){
+       background: transparent;
+       transition: all 0.5s ease;
+      }
+
+      @media screen and (max-width: 995px) {
+        header {
+          padding: 1rem 5%;
+        }
+      }
+
+      .logo {
+        font-size: 2rem;
+        color: #ffff;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.5s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .logo .atas {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: red;
+      }
+
+      .logo .bawah {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+
+      .logo:hover {
+        transform: scale(1.1);
+      }
+
+      nav a {
+        font-size: 1.2rem;
+        color: whitesmoke;
+        font-weight: 700;
+        margin-left: 4rem;
+        transition: 0.4s ease;
+        border-bottom: 3px solid transparent;
+        text-decoration: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      nav a:hover,
+      nav a.active {
+        color: #ffb300;
+        border-bottom: 3px solid #ffb300;
+      }
+
+      @media (max-width: 995px) {
+        header {
+          padding: 1rem 3%;
+        }
+
+        .logo {
+          font-size: 1.2rem;
+        }
+
+        .logo .atas {
+          font-size: 1rem;
+        }
+
+        .logo .bawah {
+          font-size: 1rem;
+        }
+
+        nav a {
+          font-size: 0.9rem;
+          margin-left: 1.5rem;
+        }
+      }
+      .gallery {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 20px;
+        color: #ffb300;
+        font-weight: 700;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .gallery-img {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        margin: 5% auto 0;
+        box-sizing: border-box;
+      }
+
+      .img-box {
+        margin: 0 1%;
+        flex-grow: 1;
+        flex-basis: 0;
+        transition: 0.5s;
+      }
+
+      .img-box img {
+        width: 100%;
+        height: 80vh;
+        border-radius: 1rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        object-fit: cover;
+        transition: 0.5s;
+      }
+
+      .img-box:hover {
+        flex-basis: 50%;
+      }
+
+      .nusantara {
+        color: red;
+      }
+
+      .gambar {
+        background: #1e1e1e;
+      }
+
+      .footer {
+        width: 100%;
+        min-height: 100px;
+        padding: 20px 80px;
+        margin: 0;
+        background: #484872;
+        text-align: center;
+      }
+
+      .footer p {
+        color: whitesmoke;
+        margin: 20px auto;
+        padding: 20px auto;
+        font-family: "Poppins", sans-serif;
+        font-size: 13.5px;
+      }
+
+      .footer a {
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <span class="atas">Budaya</span>
+        <span class="bawah">Indonesia</span>
+      </a>
+
+      <nav>
+        <a href="Budaya indonesia.html">Kebudayaan</a>
+        <a href="Tradisi.html">Tradisi</a>
+        <a href="tgasAkhir.html">Kuliner</a>
+        <a class="active" href="#">Teater</a>
+      </nav>
+    </header>
+
+    <!-- jelajah skrng -->
+    <div class="hero">
+      <div class="container">
+        <div class="info">
+          <h1>Seni Teater</h1>
+          <p>
+            Seni teater adalah bentuk pertunjukan seni kolaboratif <br> yang
+            menggunakan pemain langsung (biasanya aktor atau aktris) <br> untuk
+            menyajikan pengalaman nyata atau fiksi di atas panggung. <br> Seni teater
+            menampilkan perilaku manusia melalui gerak, <br> tari, nyanyian, dialog,
+            dan akting. Pertunjukan ini disaksikan <br> oleh penonton dan berasal
+            dari kata Yunani "theatron" yang berarti <br> tempat pertunjukan.
+          </p>
+          <a href="#destinasi-wisata"
+            ><button type="button">Jelajahi</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- teater -->
+    <section id="destinasi-wisata" class="destinasi">
+      <h2>Seni Teater</h2>
+      <div class="destinasi-container">
+        <!-- tepat 1 -->
+        <div class="destinasi-card">
+          <img src="image/wayang teater.jpeg" />
+          <h3>Wayang Kulit</h3>
+          <p>
+            Teater bayangan khas Jawa dan Bali yang menggunakan boneka kulit
+            tipis sebagai tokoh. Dalang memainkan peran, membawakan cerita dari
+            epos Ramayana dan Mahabharata. Pertunjukan diiringi musik gamelan
+            dan suluk (nyanyian khas).
+          </p>
+        </div>
+        <!-- tempat 2 -->
+        <div class="destinasi-card">
+          <img src="image/wayang golek.jpg" />
+          <h3>Wayang Golek</h3>
+          <p>
+            Boneka kayu tiga dimensi khas Sunda yang dimainkan oleh dalang.
+            Cerita bisa berupa kisah pewayangan atau cerita Islam. Pengiring
+            musik biasanya degung (gamelan Sunda).
+          </p>
+        </div>
+        <!-- tmpat 3 -->
+        <div class="destinasi-card">
+          <img src="image/wayang orang.webp" alt="Wayang Orang" />
+          <h3>Wayang Orang</h3>
+          <p>
+            Pementasan wayang dengan aktor manusia yang memakai kostum dan tari
+            tradisional. Cerita biasanya sama dengan wayang kulit, dengan dialog
+            dan musik gamelan. Populer di keraton Jawa seperti Yogyakarta dan
+            Surakarta.
+          </p>
+        </div>
+        <!-- tempt 4 -->
+        <div class="destinasi-card">
+          <img src="image/ludruk.jpg" />
+          <h3>Ludruk</h3>
+          <p>
+            Teater rakyat dari Jawa Timur yang menampilkan cerita kehidupan
+            sehari-hari dengan bumbu humor, kritik sosial, dan improvisasi.
+            Semua pemain biasanya laki-laki, termasuk yang berperan sebagai
+            wanita.
+          </p>
+        </div>
+        <!-- tmpt 5 -->
+        <div class="destinasi-card">
+          <img src="image/Kesenian_Ketoprak.jpg" />
+          <h3>Ketoprak</h3>
+          <p>
+            Teater tradisional dari Jawa Tengah dan Yogyakarta, mengisahkan
+            cerita sejarah, legenda, atau mitos. Menggabungkan dialog, nyanyian,
+            dan musik gamelan Jawa.
+          </p>
+        </div>
+        <!-- tmpt 6 -->
+        <div class="destinasi-card">
+          <img src="image/lenong.jpg" />
+          <h3>Lenong</h3>
+          <p>
+            Teater tradisional Betawi dengan gaya komedi dan improvisasi yang
+            kuat. Banyak interaksi langsung dengan penonton dan bahasa yang
+            santai.
+          </p>
+        </div>
+        <!-- tmpt 7 -->
+        <div class="destinasi-card">
+          <img src="image/randai.jpeg" />
+          <h3>Randai</h3>
+          <p>
+            Seni pertunjukan Minangkabau yang memadukan drama, tari, musik
+            (saluang dan rabab), dan silat. Pemain tampil dalam lingkaran,
+            menceritakan kisah rakyat Minangkabau.
+          </p>
+        </div>
+        <!-- tmpt 8 -->
+        <div class="destinasi-card">
+          <img src="image/arja1.jpg" />
+          <h3>Arja</h3>
+          <p>
+            Opera tradisional Bali yang menggabungkan nyanyian, tari, dan drama
+            dengan bahasa Bali. Ceritanya biasanya dari epos Ramayana atau
+            legenda setempat.
+          </p>
+        </div>
+        <!-- tmpt 9 -->
+        <div class="destinasi-card">
+          <img src="image/bangsawan.jpg" />
+          <h3>Bangsawan</h3>
+          <p>
+            Teater Melayu yang menampilkan kisah kerajaan, romantis, dan mitos.
+            Dilengkapi dengan musik tradisional Melayu dan kostum yang mewah.
+          </p>
+        </div>
+        <!-- tmpt 10 -->
+        <div class="destinasi-card">
+          <img src="image/makyong.jpg" />
+          <h3>Makyong</h3>
+          <p>
+            Seni teater Melayu dari Riau dan sekitarnya. Menggabungkan tari,
+            musik, dan dialog yang bernuansa magis dan spiritual. Biasanya
+            pemain perempuan.
+          </p>
+        </div>
+        <!-- tmpt 11 -->
+        <div class="destinasi-card">
+          <img src="image/reog.jpg" />
+          <h3>Reog Ponorogo</h3>
+          <p>
+            Pertunjukan khas Ponorogo, Jawa Timur, menampilkan tarian dengan
+            topeng besar seperti Singa Barong. Penuh unsur mistik dan kekuatan
+            fisik para pemain.
+          </p>
+        </div>
+        <!-- tmpt 12 -->
+        <div class="destinasi-card">
+          <img src="image/Mamanda_Panji_Berseri_141109002.jpg" />
+          <h3>Mamanda</h3>
+          <p>
+            Teater tradisional Melayu Kalimantan Selatan yang mengisahkan cerita
+            rakyat, legenda, dan sejarah daerah. Memadukan dialog, nyanyian, dan
+            musik tradisional seperti gambus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="gambar">
+      <h1 class="gallery">Galeri</h1>
+      <div class="gallery-img">
+        <div class="img-box">
+          <img src="image/wayang teater.jpeg" />
+        </div>
+        <div class="img-box">
+          <img src="image/wayang golek.jpg" />
+        </div>
+        <div class="img-box">
+          <img src="image/wayang orang.webp" />
+        </div>
+        <div class="img-box">
+          <img src="image/ludruk.jpg" />
+        </div>
+        <div class="img-box">
+          <img src="image/Kesenian_Ketoprak.jpg" />
+        </div>
+        <div class="img-box">
+          <img src="image/lenong.jpg" />
+        </div>
+      </div>
+      <div class="gallery-img">
+        <div class="img-box">
+          <img src="image/randai.jpeg" />
+        </div>
+        <div class="img-box">
+          <img src="image/arja1.jpg" />
+        </div>
+        <div class="img-box">
+          <img src="image/bangsawan.jpg" />
+        </div>
+        <div class="img-box">
+          <img src="image/makyong.jpg" />
+        </div>
+        <div class="img-box">
+          <img src="image/reog.jpg" />
+        </div>
+        <div class="img-box">
+          <img src="image/Mamanda_Panji_Berseri_141109002.jpg" />
+        </div>
+      </div>
+    </div>
+    
+    <section class="footer">
+      <p>
+        Tentang Pembuat Situs Website ini Bisa Kalian Temukan di Halaman |
+        <a href="tentang kami.html">Profil</a> |
+      </p>
+      <p>&copy; 2023 Budaya Indonesia. All rights reserved.</p>
+    </section>
+  </body>
+</html>

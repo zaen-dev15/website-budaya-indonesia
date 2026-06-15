@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <title>Hubungi Kami</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="website icon" type="png" href="indonesia.png" />
+</head>
+<body>
+  <div class="contact-wrapper">
+    <div class="contact-card">
+      <h2><i class="fas fa-headset"></i> Hubungi Kami</h2>
+      <p class="subtitle">Kami di sini untuk Anda! Isi formulir di bawah ini.</p>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name"><i class="fas fa-user"></i> Nama</label>
+          <input type="text" id="name" name="name" required aria-required="true"/>
+        </div>
+        <div class="form-group">
+          <label for="email"><i class="fas fa-envelope"></i> Email</label>
+          <input type="email" id="email" name="email" required aria-required="true"/>
+        </div>
+        <div class="form-group">
+          <label for="message"><i class="fas fa-comment-dots"></i> Pesan</label>
+          <textarea id="message" name="message" required aria-required="true"></textarea>
+        </div>
+        <button type="submit" aria-label="Kirim Pesan"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+      </form>
+      <a href="tentang kami.html"><button class="kembali">Kembali</button></a>
+    </div>
+  </div>
+  <!-- berhasil Popup -->
+  <div id="successPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+      <i class="fas fa-check-circle popup-icon success"></i>
+      <h3>Berhasil Terkirim!</h3>
+      <p>Pesan Anda telah kami terima. Kami akan segera menghubungi Anda!</p>
+      <button class="popup-close" onclick="closePopup('successPopup')">Oke</button>
+    </div>
+  </div>
+  <!-- gagal Popup -->
+  <div id="failurePopup" class="popup" style="display: none;">
+    <div class="popup-content">
+      <i class="fas fa-times-circle popup-icon failure"></i>
+      <h3>Gagal Mengirim</h3>
+      <p>Maaf, terjadi kesalahan. Silakan coba lagi nanti.</p>
+      <button class="popup-close" onclick="closePopup('failurePopup')">Oke</button>
+    </div>
+  </div>
+  <!-- Invalid Popup -->
+  <div id="invalidEmailPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+      <i class="fas fa-exclamation-circle popup-icon failure"></i>
+      <h3>Email Tidak Valid</h3>
+      <p>Silakan masukkan alamat email yang benar.</p>
+      <button class="popup-close" onclick="closePopup('invalidEmailPopup')">Oke</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

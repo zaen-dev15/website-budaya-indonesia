@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Poppins:ital,wght@1,600&display=swap');
+.header{
+    width: 100%;
+    height: 70vh;
+    padding: 30;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, rgba(66, 65, 65, 0.5), rgba(37, 36, 36, 0));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1 {
+    margin-top: 200px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(37, 37, 37);
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/kuliner\ nusantara.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.hero {
+    width: 100%;
+    height: 75vh;
+    padding: 20px 10%;
+}
+
+.row {
+    display : flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.feature-img {
+    width: 95%;
+    margin-top: 10%;
+    border-radius: 55%;
+}
+
+.thumbnail-img {
+    width: 250px;
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail-2-img {
+    width: 250px;
+    position: absolute;
+    margin-top: 10%;
+    right: -30px;
+    border-radius: 50%;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.typing-text, p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.feature-img:hover,
+.thumbnail-img:hover,
+.thumbnail-2-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 995px) {
+    .hero {
+        height: auto;
+        padding: 10px 5%;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .feature-img {
+        width: 80%;
+        margin-top: 20px;
+        border-radius: 50%;
+    }
+
+    .thumbnail-img,
+    .thumbnail-2-img {
+        width: 150px;
+        position: static;
+        margin: 10px auto;
+        border-radius: 50%;
+        box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.col h1 {
+    margin-top: 180px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: whitesmoke;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.col p {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.3;
+    margin-top: 6%;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: 20px;
+}
+.card{
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    width: 45%;
+    box-shadow: 20px 20px 20px rgba(255, 255, 255, 0.295);
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }}
+    
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card-content{
+    padding: 16px;
+}
+.card-content h3{
+    font-size: 28px;
+    padding-bottom: 8px;
+}
+.card-content p{
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+}
+.card-content .btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.container a {
+    text-decoration: none;
+    color: #ffffff9c;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-inline: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar{
+    margin-top: 20px;
+    padding-left: 40px;
+    position: absolute;
+}
+
+    
+ .container a:hover {
+    color: rgb(69, 214, 214);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    animation: slideIn 1s ease-in-out;
+}
+
+.kuliner {
+    text-shadow: 3px 3px 3px rgba(241, 241, 241, 0.39);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: all 0.4s ease;
+    background-color: #5293dd;
+    color: black;
+}
+
+.btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header:hover {
+    background: #18181882;
+    transition: all 0.5s ease;
+}
+  
+  header:not(:hover){
+    background: transparent;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #ffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logo .atas{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: red;
+}
+
+.logo .bawah{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-weight: 700;
+    margin-left: 4rem;
+    transition: 0.4s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav a:hover,
+nav a.active {
+    color: #4caf50;
+    border-bottom: 3px solid #4caf50;
+}
+
+@media (max-width: 995px) {
+    header {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo .atas {
+        font-size: 1rem;
+    }
+
+    .logo .bawah {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        margin-left: 1.5rem;
+    }
+}
+
+
+.col button {
+    background-color: transparent;
+    border: 0.2rem solid #88888850;
+    font-size: 1rem;
+    border-radius: 45px;
+    padding: 15px 50px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.3 ease;
+    margin-top: 5%;
+}
+
+.col button:hover {
+    background-color: #4caf50;
+    color: white;
+    transform: scale(1.1) translateY(-5px);
+    transition: 0.3s ease;
+    border: none;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.507);
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text::before {
+    content: "Kuliner Terkenal Indonesia";
+    color: white;
+    animation: words 25s infinite;
+}
+
+.typing-text::after {
+    content: "";
+    background-color: transparent;
+    height: 12%;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid white;
+    }
+}
+
+@keyframes words {
+   0%, 20%{
+        content: "Kuliner Terkenal Indonesia";
+    }
+    21%, 40%{
+        content: "Rasa Autentik Nusantara";
+    }
+    41%, 60%{
+        content: "Cita Rasa yang Melekat di Hati";
+    }
+    61%, 80%{
+        content: "Mari Mengenal Kuliner Indonesia!";
+    }
+    81%, 100%{
+        content: "Kuliner Terkenal Indonesia";
+    }
+}
+
+.footer {
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 80px;
+    margin: 0;
+    background: #484872;
+    text-align: center;
+}
+
+.footer p {
+    color: whitesmoke;
+    margin: 20px auto;
+    padding: 20px auto;
+    font-family: "Poppins", sans-serif;
+    font-size: 13.5px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: "Poppins", sans-serif;
+}
