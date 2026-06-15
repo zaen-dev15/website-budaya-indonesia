@@ -2,6 +2,8 @@
 
 An educational website showcasing Indonesian culture, traditions, and heritage.
 
+![Preview](image/preview.png)
+
 ## Features
 - Traditional houses
 - Traditional dances
