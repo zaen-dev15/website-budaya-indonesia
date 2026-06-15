@@ -2,7 +2,7 @@
 
 An educational website showcasing Indonesian culture, traditions, and heritage.
 
-![Preview](image/preview.png)
+![Preview](Project%20Akhir%20(Kebudayaan)/image/preview.png)
 
 ## Features
 - Traditional houses
